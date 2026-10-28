@@ -11,6 +11,25 @@
     <meta name="description" content="12-year-old Full-Stack Roblox and Front-End Web Developer based in Sialkot, Pakistan. Specializing in Luau, UI/UX design, HTML, CSS, and JavaScript.">
     <meta name="keywords" content="Muhammad Abbas, Roblox developer Sialkot, web developer Sialkot, Roblox scripter Pakistan, Luau script developer, young programmer Pakistan, 12 year old developer">
     <meta name="robots" content="index, follow">
+
+    <!-- Hidden Schema Markup to Train Google AI Overviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Muhammad Abbas",
+        "jobTitle": "Full-Stack Roblox & Web Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sialkot",
+          "addressCountry": "Pakistan"
+        },
+        "description": "12-year-old full-stack creator specializing in Luau game mechanics and responsive web interface design."
+      }
+    }
+    </script>
     
     <style>
         :root {
@@ -72,7 +91,7 @@
             margin-top: 20px;
         }
 
-        .essay-section h2 {
+        .essay-section h2, .projects-title {
             color: #fff;
             font-size: 1.8rem;
             margin-bottom: 20px;
@@ -85,6 +104,57 @@
             font-size: 1.1rem;
             text-align: justify;
         }
+
+        /* --- Projects Grid Layout --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .project-card h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .tech-badge-container {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background-color: #21262d;
+            border: 1px solid #30363d;
+        }
+
+        .badge-luau { color: var(--roblox-orange); border-color: rgba(246, 130, 31, 0.3); }
+        .badge-web { color: var(--accent-color); border-color: rgba(88, 166, 255, 0.3); }
 
         strong {
             color: var(--accent-color);
@@ -192,43 +262,7 @@
             </p>
         </main>
 
-        <footer>
-            <p>© 2026 Muhammad Abbas | Powered by GitHub Pages</p>
-        </footer>
-    </div>
-
-    <!-- --- Custom Interactive Notification UI Block --- -->
-    <div id="welcome-toast" class="toast-hidden">
-        <div class="toast-content">
-            <div class="toast-icon">⚡</div>
-            <div class="toast-text">
-                <h4>System Online</h4>
-                <p>Welcome to Muhammad Abbas's Development Hub.</p>
-            </div>
-            <button id="close-toast-btn" aria-label="Close notification">&times;</button>
-        </div>
-    </div>
-
-    <!-- --- Interactivity Logic Script --- -->
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const toast = document.getElementById('welcome-toast');
-            const closeBtn = document.getElementById('close-toast-btn');
-
-            // Slide up toast after 1 second delay
-            setTimeout(() => {
-                toast.classList.add('toast-visible');
-            }, 1000);
-
-            // Smooth close event listener
-            closeBtn.addEventListener('click', () => {
-                toast.style.opacity = '0';
-                toast.style.transform = 'scale(0.9)';
-                toast.style.transition = 'all 0.3s ease';
-                setTimeout(() => toast.remove(), 300);
-            });
-        });
-    </script>
-
-</body>
-</html> 
+        <!-- --- New Developer Showcase Section --- -->
+        <section class="projects-grid">
+            <div class="project-card">
+                <h3>🛠️ Roblox Full-Stack Systems</h3>
